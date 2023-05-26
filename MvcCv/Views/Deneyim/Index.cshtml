@@ -13,8 +13,8 @@
         <th>Başlık</th>
         <th>Alt Başlık</th>
         <th>Tarih</th>
-        <th>Düzenle</th>
-        <th>Sil</th>
+        <th style="width: 150px">Düzenle</th>
+        <th style="width: 100px">Sil</th>
     </tr>
     @foreach(var item in Model)
             {
@@ -23,8 +23,8 @@
                     <td>@item.Baslik</td>
                     <td>@item.AltBaslik</td>
                     <td>@item.Tarih</td>
-                    <td><a href="/Deneyim/DeneyimGetir/@item.ID" class="btn btn-warning">Düzenle</a></td>
-                    <td><a href="/Deneyim/DeneyimSil/@item.ID" class="btn btn-danger">Sil</a></td>
+                    <td><a href="/Deneyim/DeneyimGetir/@item.ID" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>&nbsp;&nbsp;Düzenle</a></td>
+                    <td><a href="/Deneyim/DeneyimSil/@item.ID" class="btn btn-danger"><i class="fas fa-trash"></i>&nbsp;&nbsp;Sil</a></td>
                 </tr>
             }
 </table>
