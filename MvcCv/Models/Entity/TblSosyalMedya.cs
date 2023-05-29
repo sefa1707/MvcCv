@@ -15,20 +15,18 @@ namespace MvcCv.Models.Entity
 using System;
     using System.Collections.Generic;
     
-public partial class TblEgitim
+public partial class TblSosyalMedya
 {
 
     public int ID { get; set; }
 
-    public string Baslik { get; set; }
+    public string Ad { get; set; }
 
-    public string AltBaslik1 { get; set; }
+    public string Link { get; set; }
 
-    public string AltBaslik2 { get; set; }
+    public string ikon { get; set; }
 
-    public string GNO { get; set; }
-
-    public string Tarih { get; set; }
+    public Nullable<bool> Durum { get; set; }
 
 }
 

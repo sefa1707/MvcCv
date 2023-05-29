@@ -74,6 +74,16 @@
           <Property Name="Tarih" Type="varchar" MaxLength="30" />
           <Property Name="Aciklama" Type="varchar" MaxLength="250" />
         </EntityType>
+        <EntityType Name="TblSosyalMedya">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="varchar" MaxLength="30" />
+          <Property Name="Link" Type="varchar" MaxLength="50" />
+          <Property Name="ikon" Type="varchar" MaxLength="30" />
+          <Property Name="Durum" Type="bit" />
+        </EntityType>
         <EntityType Name="TblYetenek">
           <Key>
             <PropertyRef Name="ID" />
@@ -90,6 +100,7 @@
           <EntitySet Name="TblHobi" EntityType="Self.TblHobi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tbliletisim" EntityType="Self.Tbliletisim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblSertifika" EntityType="Self.TblSertifika" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblSosyalMedya" EntityType="Self.TblSosyalMedya" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblYetenek" EntityType="Self.TblYetenek" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -118,6 +129,7 @@
           <EntitySet Name="Tbliletisim" EntityType="MvcCvDbModel.Tbliletisim" />
           <EntitySet Name="TblSertifika" EntityType="MvcCvDbModel.TblSertifika" />
           <EntitySet Name="TblYetenek" EntityType="MvcCvDbModel.TblYetenek" />
+          <EntitySet Name="TblSosyalMedya" EntityType="MvcCvDbModel.TblSosyalMedya" />
         </EntityContainer>
         <EntityType Name="TblAdmin">
           <Key>
@@ -182,6 +194,16 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Yetenek" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Oran" Type="Byte" />
+        </EntityType>
+        <EntityType Name="TblSosyalMedya">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ikon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Durum" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -270,6 +292,17 @@
               <MappingFragment StoreEntitySet="TblYetenek">
                 <ScalarProperty Name="Oran" ColumnName="Oran" />
                 <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblSosyalMedya">
+            <EntityTypeMapping TypeName="MvcCvDbModel.TblSosyalMedya">
+              <MappingFragment StoreEntitySet="TblSosyalMedya">
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+                <ScalarProperty Name="ikon" ColumnName="ikon" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="MvcCvDbModel.Tbliletisim" Width="1.5" PointX="5.75" PointY="3.75" />
         <EntityTypeShape EntityType="MvcCvDbModel.TblSertifika" Width="1.5" PointX="2.75" PointY="6.75" />
         <EntityTypeShape EntityType="MvcCvDbModel.TblYetenek" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="MvcCvDbModel.TblSosyalMedya" Width="1.5" PointX="7.375" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

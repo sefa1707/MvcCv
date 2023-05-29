@@ -22,6 +22,11 @@ namespace MvcCv.Controllers
             var deneyimler = db.TblDeneyim.ToList();
             return PartialView(deneyimler);
         }
+        public PartialViewResult SosyalMedya()
+        {
+            var sosyal = db.TblSosyalMedya.Where(x => x.Durum == true).ToList();
+            return PartialView(sosyal);
+        }
         public PartialViewResult Egitim()
         {
             var egitimler = db.TblEgitim.ToList();
